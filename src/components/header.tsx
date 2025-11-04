@@ -5,7 +5,7 @@ import { Phone, Menu, X } from 'lucide-react';
 import { Logo } from '@/components/logo';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Sheet, SheetContent, SheetTrigger, SheetClose } from '@/components/ui/sheet';
+import { Sheet, SheetContent, SheetTrigger, SheetClose, SheetTitle } from '@/components/ui/sheet';
 
 const navLinks = [
   { name: 'Services', href: '#services' },
@@ -75,6 +75,7 @@ export default function Header() {
                 </Button>
               </SheetTrigger>
               <SheetContent side="right" className="w-[80vw] bg-background">
+                  <SheetTitle className="sr-only">Mobile Menu</SheetTitle>
                   <div className="flex flex-col h-full">
                     <div className="p-4 border-b">
                       <Logo />
