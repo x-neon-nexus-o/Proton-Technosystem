@@ -67,7 +67,7 @@ export default function Footer() {
                 </div>
 
                 <div className="mt-12 pt-8 border-t border-gray-800 flex flex-col sm:flex-row justify-between items-center">
-                    <p className="text-gray-400 text-sm">
+                    <p className="text-gray-400 text-sm text-center sm:text-left">
                         Made with ❤️ by PROTON TECHNOSYSTEM.
                     </p>
                     <div className="flex items-center space-x-4 mt-6 sm:mt-0">
