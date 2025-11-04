@@ -4,7 +4,7 @@ import { zodResolver } from "@hookform/resolvers/zod"
 import { useForm } from "react-hook-form"
 import * as z from "zod"
 import { Loader2 } from "lucide-react"
-import React from "react"
+import React, { useEffect, useState } from "react"
 
 import { Button } from "@/components/ui/button"
 import {
@@ -42,6 +42,11 @@ const formSchema = z.object({
 export function ContactForm() {
   const { toast } = useToast()
   const [isSubmitting, setIsSubmitting] = React.useState(false);
+  const [isClient, setIsClient] = useState(false)
+
+  useEffect(() => {
+    setIsClient(true)
+  }, [])
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
@@ -64,6 +69,10 @@ export function ContactForm() {
       title: "Message Sent!",
       description: "Thank you for reaching out. We will get back to you shortly.",
     })
+  }
+
+  if (!isClient) {
+    return null;
   }
 
   return (
