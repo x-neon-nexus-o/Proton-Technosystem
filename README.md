@@ -1,4 +1,4 @@
-# Proton Technosystem
+# Proton Technosystem (This is a Next.js application for Proton Technosystem, an electronics repair service company developed for a client)
 
 This is a Next.js application for Proton Technosystem, an electronics repair service company.
 
