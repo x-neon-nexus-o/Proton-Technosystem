@@ -22,7 +22,7 @@ const Brands = () => {
                 <div className="animate-marquee whitespace-nowrap flex items-center space-x-16 px-8">
                     {/* First set of brands */}
                     {brands.map((brand, index) => (
-                        <div key={index} className="flex items-center justify-center w-32 h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer">
+                        <div key={index} className="flex items-center justify-center w-32 h-16 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer">
                             <img
                                 src={brand.logo}
                                 alt={brand.name}
@@ -32,7 +32,7 @@ const Brands = () => {
                     ))}
                     {/* Duplicate set for seamless loop */}
                     {brands.map((brand, index) => (
-                        <div key={`dup-${index}`} className="flex items-center justify-center w-32 h-16 grayscale hover:grayscale-0 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer">
+                        <div key={`dup-${index}`} className="flex items-center justify-center w-32 h-16 transition-all duration-300 opacity-60 hover:opacity-100 hover:scale-110 cursor-pointer">
                             <img
                                 src={brand.logo}
                                 alt={brand.name}
