@@ -71,8 +71,8 @@ const Testimonials = () => {
                             <div
                                 key={index}
                                 className={`transition-all duration-700 ease-in-out transform ${index === activeIndex
-                                        ? 'opacity-100 translate-x-0 z-10'
-                                        : 'opacity-0 translate-x-8 z-0 pointer-events-none'
+                                    ? 'opacity-100 translate-x-0 z-10'
+                                    : 'opacity-0 translate-x-8 z-0 pointer-events-none'
                                     }`}
                                 style={{ gridArea: '1 / 1' }}
                             >
