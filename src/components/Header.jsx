@@ -35,14 +35,20 @@ const Header = ({ isDarkMode, toggleTheme }) => {
         >
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
-                <div className="flex items-center space-x-2">
-                    <div className="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                        PROTON
+                <a href="#home" className="flex items-center gap-3 group">
+                    <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
+                        <div className="absolute inset-0 bg-white/20 rounded-xl backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <span className="font-bold text-2xl">P</span>
                     </div>
-                    <span className={`hidden md:block text-sm font-medium tracking-wider transition-colors ${isScrolled ? 'text-gray-600 dark:text-gray-300' : 'text-gray-200'}`}>
-                        TECHNOSYSTEM
-                    </span>
-                </div>
+                    <div className="flex flex-col">
+                        <span className="text-2xl font-black tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
+                            PROTON
+                        </span>
+                        <span className={`text-[0.65rem] font-bold tracking-[0.2em] uppercase transition-colors ${isScrolled ? 'text-gray-500 dark:text-gray-400' : 'text-gray-300'}`}>
+                            TECHNOSYSTEM
+                        </span>
+                    </div>
+                </a>
 
                 {/* Desktop Navigation */}
                 <nav className="hidden md:flex items-center space-x-8">
