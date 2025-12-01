@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
 import Services from './components/Services';
@@ -10,11 +10,13 @@ import Testimonials from './components/Testimonials';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
+import BookingModal from './components/BookingModal';
 
 function App() {
-  const [isDarkMode, setIsDarkMode] = React.useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
+  const [isModalOpen, setIsModalOpen] = useState(false);
 
-  React.useEffect(() => {
+  useEffect(() => {
     if (isDarkMode) {
       document.documentElement.classList.add('dark');
     } else {
@@ -22,23 +24,29 @@ function App() {
     }
   }, [isDarkMode]);
 
-  const toggleTheme = () => setIsDarkMode(!isDarkMode);
+  const toggleTheme = () => {
+    setIsDarkMode(!isDarkMode);
+  };
+
+  const openModal = () => setIsModalOpen(true);
+  const closeModal = () => setIsModalOpen(false);
 
   return (
-    <div className={`min-h-screen font-sans text-textPrimary selection:bg-primary/20 selection:text-primary transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-lightBg'}`}>
-      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
+    <div className={`min-h-screen transition-colors duration-300 ${isDarkMode ? 'bg-gray-900 text-white' : 'bg-lightBg'}`}>
+      <Header isDarkMode={isDarkMode} toggleTheme={toggleTheme} openModal={openModal} />
       <main>
-        <Hero />
-        <Services />
-        <WhyChooseUs />
-        <Products />
-        <HowItWorks />
+        <Hero openModal={openModal} />
         <Brands />
+        <Services />
+        <Products />
+        <WhyChooseUs />
+        <HowItWorks />
         <Testimonials />
         <Contact />
       </main>
       <Footer />
       <FloatingButtons />
+      <BookingModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   );
 }

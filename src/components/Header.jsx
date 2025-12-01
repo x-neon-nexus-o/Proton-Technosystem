@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Phone, Menu, X, Sun, Moon } from 'lucide-react';
 
-const Header = ({ isDarkMode, toggleTheme }) => {
+const Header = ({ isDarkMode, toggleTheme, openModal }) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [language, setLanguage] = useState('EN'); // 'EN' or 'HI'
@@ -89,7 +89,10 @@ const Header = ({ isDarkMode, toggleTheme }) => {
                         <Phone size={20} />
                     </a>
 
-                    <button className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300">
+                    <button
+                        onClick={openModal}
+                        className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                    >
                         Get Quote
                     </button>
                 </div>
@@ -131,7 +134,13 @@ const Header = ({ isDarkMode, toggleTheme }) => {
                             <span className="text-2xl">{language === 'EN' ? '🇬🇧' : '🇮🇳'}</span>
                             <span className="font-medium">{language === 'EN' ? 'English' : 'Hindi'}</span>
                         </button>
-                        <button className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium shadow-md">
+                        <button
+                            onClick={() => {
+                                openModal();
+                                setIsMenuOpen(false);
+                            }}
+                            className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium shadow-md"
+                        >
                             Get Quote
                         </button>
                     </div>

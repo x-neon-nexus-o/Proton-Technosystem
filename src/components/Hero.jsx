@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ArrowRight, Phone, Shield, Star, Clock } from 'lucide-react';
 
-const Hero = () => {
+const Hero = ({ openModal }) => {
     const [offset, setOffset] = useState(0);
 
     useEffect(() => {
@@ -44,7 +44,10 @@ const Hero = () => {
                     </p>
 
                     <div className="flex flex-col sm:flex-row gap-4 mb-12 animate-fade-in-up delay-300">
-                        <button className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-lg shadow-lg hover:shadow-red-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group">
+                        <button
+                            onClick={openModal}
+                            className="px-8 py-4 bg-gradient-to-r from-primary to-secondary rounded-full font-bold text-lg shadow-lg hover:shadow-red-500/30 hover:scale-105 transition-all duration-300 flex items-center justify-center gap-2 group"
+                        >
                             Book Repair
                             <ArrowRight size={20} className="group-hover:translate-x-1 transition-transform" />
                         </button>
