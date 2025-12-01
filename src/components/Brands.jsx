@@ -1,14 +1,14 @@
 import React from 'react';
 
 const brands = [
-    { name: "HIKVISION", logo: "/hikvision.svg" },
-    { name: "Canon", logo: "/VectorWiki-TUbOH__canon-wordmark.svg" },
-    { name: "ViewSonic", logo: "/VectorWiki-GxHjS__viewsonic.svg" },
-    { name: "Sony", logo: "/sony-logo.svg" },
-    { name: "Epson", logo: "/VectorWiki-avNHH__epson-2.svg" },
-    { name: "Nikon", logo: "/VectorWiki-dwXyK__nikon.svg" },
-    { name: "Panasonic", logo: "/VectorWiki-g8xWQ__panasonic.svg" },
-    { name: "BenQ", logo: "/VectorWiki-j7F3P__benq.svg" }
+    { name: "HIKVISION", logo: `${import.meta.env.BASE_URL}hikvision.svg` },
+    { name: "Canon", logo: `${import.meta.env.BASE_URL}VectorWiki-TUbOH__canon-wordmark.svg` },
+    { name: "ViewSonic", logo: `${import.meta.env.BASE_URL}VectorWiki-GxHjS__viewsonic.svg` },
+    { name: "Sony", logo: `${import.meta.env.BASE_URL}sony-logo.svg` },
+    { name: "Epson", logo: `${import.meta.env.BASE_URL}VectorWiki-avNHH__epson-2.svg` },
+    { name: "Nikon", logo: `${import.meta.env.BASE_URL}VectorWiki-dwXyK__nikon.svg` },
+    { name: "Panasonic", logo: `${import.meta.env.BASE_URL}VectorWiki-g8xWQ__panasonic.svg` },
+    { name: "BenQ", logo: `${import.meta.env.BASE_URL}VectorWiki-j7F3P__benq.svg` }
 ];
 
 const Brands = () => {

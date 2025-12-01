@@ -86,6 +86,21 @@ Proton Technosystem/
     npm run build
     ```
 
+## 🚀 Deployment
+
+The project is configured for deployment to **GitHub Pages**.
+
+1.  **Deploy Command**
+    ```bash
+    npm run deploy
+    ```
+    This script runs the build process and pushes the `dist` folder to the `gh-pages` branch.
+
+2.  **Configuration**
+    -   `vite.config.js`: Sets `base` to `/Proton-Technosystem/`.
+    -   `package.json`: Includes `homepage`, `predeploy`, and `deploy` scripts.
+    -   `Brands.jsx`: Uses dynamic base URL for asset paths.
+
 ## 🌓 Dark Mode Implementation
 
 The project uses Tailwind's `darkMode: 'class'` strategy.
