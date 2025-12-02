@@ -35,19 +35,14 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
         >
             <div className="container mx-auto px-4 flex justify-between items-center">
                 {/* Logo */}
-                <a href="#home" className="flex items-center gap-3 group">
-                    <div className="relative flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-primary to-secondary text-white shadow-lg group-hover:shadow-primary/50 transition-all duration-300 group-hover:scale-105">
-                        <div className="absolute inset-0 bg-white/20 rounded-xl backdrop-blur-sm opacity-0 group-hover:opacity-100 transition-opacity"></div>
-                        <span className="font-bold text-2xl">P</span>
-                    </div>
-                    <div className="flex flex-col">
-                        <span className="text-2xl font-black tracking-tight leading-none bg-clip-text text-transparent bg-gradient-to-r from-primary to-secondary">
-                            PROTON
-                        </span>
-                        <span className={`text-[0.65rem] font-bold tracking-[0.2em] uppercase transition-colors ${isScrolled ? 'text-gray-500 dark:text-gray-400' : 'text-gray-300'}`}>
-                            TECHNOSYSTEM
-                        </span>
-                    </div>
+                {/* Logo */}
+                <a href="#home" className="flex flex-col group select-none">
+                    <span className="text-3xl font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-r from-primary via-red-500 to-secondary group-hover:bg-gradient-to-l transition-all duration-500">
+                        PROTON
+                    </span>
+                    <span className={`text-[0.6rem] font-bold tracking-[0.35em] uppercase transition-colors pl-0.5 ${isScrolled ? 'text-gray-600 dark:text-gray-400' : 'text-gray-300 group-hover:text-white'}`}>
+                        TECHNOSYSTEM
+                    </span>
                 </a>
 
                 {/* Desktop Navigation */}
