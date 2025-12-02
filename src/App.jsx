@@ -7,6 +7,7 @@ import WhyChooseUs from './components/WhyChooseUs';
 import Brands from './components/Brands';
 import HowItWorks from './components/HowItWorks';
 import Testimonials from './components/Testimonials';
+import FAQ from './components/FAQ';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import FloatingButtons from './components/FloatingButtons';
@@ -42,6 +43,7 @@ function App() {
         <WhyChooseUs />
         <HowItWorks />
         <Testimonials />
+        <FAQ />
         <Contact />
       </main>
       <Footer />
