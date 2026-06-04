@@ -33,11 +33,11 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
                 : 'bg-gradient-to-b from-black/50 to-transparent py-4'
                 }`}
         >
-            <div className="container mx-auto px-4 flex justify-between items-center">
+            <div className="container flex items-center justify-between px-4 mx-auto">
                 {/* Logo */}
                 {/* Logo */}
-                <a href="#home" className="flex flex-col group select-none">
-                    <span className="text-3xl font-black tracking-tighter leading-none bg-clip-text text-transparent bg-gradient-to-r from-primary via-red-500 to-secondary group-hover:bg-gradient-to-l transition-all duration-500">
+                <a href="#home" className="flex flex-col select-none group">
+                    <span className="text-3xl font-black leading-none tracking-tighter text-transparent transition-all duration-500 bg-clip-text bg-gradient-to-r from-primary via-red-500 to-secondary group-hover:bg-gradient-to-l">
                         PROTON
                     </span>
                     <span className={`text-[0.6rem] font-bold tracking-[0.35em] uppercase transition-colors pl-0.5 ${isScrolled ? 'text-gray-600 dark:text-gray-400' : 'text-gray-300 group-hover:text-white'}`}>
@@ -46,7 +46,7 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
                 </a>
 
                 {/* Desktop Navigation */}
-                <nav className="hidden md:flex items-center space-x-8">
+                <nav className="items-center hidden space-x-8 md:flex">
                     {navItems.map((item) => (
                         <a
                             key={item.name}
@@ -60,7 +60,7 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
                 </nav>
 
                 {/* Actions */}
-                <div className="hidden md:flex items-center space-x-4">
+                <div className="items-center hidden space-x-4 md:flex">
                     <button
                         onClick={toggleTheme}
                         className={`p-2 rounded-full transition-colors ${isScrolled ? 'hover:bg-gray-100 dark:hover:bg-gray-800 text-textPrimary dark:text-white' : 'hover:bg-white/20 text-white'}`}
@@ -78,7 +78,7 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
                     </button>
 
                     <a
-                        href="tel:+919876543210"
+                        href="tel:+918108036576"
                         className={`flex items-center justify-center w-10 h-10 rounded-full transition-all duration-300 animate-pulse-slow ${isScrolled ? 'bg-secondary/10 text-secondary hover:bg-secondary hover:text-white' : 'bg-white/20 text-white hover:bg-white hover:text-secondary'}`}
                     >
                         <Phone size={20} />
@@ -86,7 +86,7 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
 
                     <button
                         onClick={openModal}
-                        className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium shadow-lg hover:shadow-xl hover:scale-105 transition-all duration-300"
+                        className="px-6 py-2 font-medium text-white transition-all duration-300 rounded-full shadow-lg bg-gradient-to-r from-primary to-secondary hover:shadow-xl hover:scale-105"
                     >
                         Get Quote
                     </button>
@@ -103,7 +103,7 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
 
             {/* Mobile Menu */}
             {isMenuOpen && (
-                <div className="md:hidden absolute top-full left-0 w-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg shadow-xl py-4 px-4 flex flex-col space-y-4 animate-slide-down">
+                <div className="absolute left-0 flex flex-col w-full px-4 py-4 space-y-4 shadow-xl md:hidden top-full bg-white/95 dark:bg-gray-900/95 backdrop-blur-lg animate-slide-down">
                     {navItems.map((item) => (
                         <a
                             key={item.name}
@@ -134,7 +134,7 @@ const Header = ({ isDarkMode, toggleTheme, openModal }) => {
                                 openModal();
                                 setIsMenuOpen(false);
                             }}
-                            className="px-6 py-2 bg-gradient-to-r from-primary to-secondary text-white rounded-full font-medium shadow-md"
+                            className="px-6 py-2 font-medium text-white rounded-full shadow-md bg-gradient-to-r from-primary to-secondary"
                         >
                             Get Quote
                         </button>
