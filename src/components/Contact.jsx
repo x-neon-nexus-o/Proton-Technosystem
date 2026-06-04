@@ -60,7 +60,7 @@ const Contact = () => {
                                 </div>
                                 <div>
                                     <h3 className="mb-1 text-lg font-bold text-textPrimary dark:text-white">Call Us</h3>
-                                    <p className="text-gray-600 dark:text-gray-300">+91 8108036576</p>
+                                    <p className="text-gray-600 dark:text-gray-300">8108036576</p>
                                     <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">Mon–Sat, 10 AM – 8 PM</p>
                                 </div>
                             </div>
@@ -120,7 +120,7 @@ const Contact = () => {
                                         onChange={handleChange}
                                         required
                                         className="w-full px-4 py-3 transition-all border border-gray-200 outline-none rounded-xl bg-gray-50 dark:bg-gray-700 dark:border-gray-600 text-textPrimary dark:text-white focus:border-primary focus:ring-2 focus:ring-primary/20"
-                                        placeholder="+91 8108036576"
+                                        placeholder="8108036576"
                                     />
                                 </div>
                                 <div>

@@ -94,7 +94,7 @@ const BookingModal = ({ isOpen, onClose }) => {
                                         value={formData.phone}
                                         onChange={handleChange}
                                         className="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-gray-800 border border-gray-200 dark:border-gray-700 focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all dark:text-white"
-                                        placeholder="+91 98765 43210"
+                                        placeholder="8108036576"
                                     />
                                 </div>
 
