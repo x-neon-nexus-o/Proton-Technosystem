@@ -1,5 +1,9 @@
 name: Deploy to GitHub Pages
 
+# Allow the workflow to push to the repository (write access to contents)
+permissions:
+  contents: write
+
 on:
   push:
     branches: [ master ]
